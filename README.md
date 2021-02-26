@@ -67,6 +67,9 @@ On local tests i got an average rate of 1 request every 0.013 seconds.
 ![Failed run demo](.imgs/demo_error.png "Demo 2")
 
 
+## TODO
+1. Add a flag to pass token for authenticated requests.
+
 ## Final notes
 I have just learnt Golang and this is my first project. Any and all feedbacks are appreciated! 
 Thanks!
