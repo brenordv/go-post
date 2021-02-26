@@ -6,7 +6,7 @@ The posts will be made concurrently, so it's a fast process, and you can use thi
 to do simple stress tests on your apis.
 
 ## Limitations
-1. For now, only flat jsons structures are supported.
+1. For now, only flat json structures are supported.
 
 ## How does it work
 1. Create an Excel file
