@@ -112,6 +112,16 @@ func getArgs() CliArgs {
 	}
 }
 
+func getErrStatusCode(resp *http.Response) int {
+	var statusCode int
+	if resp != nil {
+		statusCode = resp.StatusCode
+	} else {
+		statusCode = 0
+	}
+	return statusCode
+}
+
 func send(row []string, headers []string, url string, worker int, c chan SendResult) {
 	payload := make(map[string] string)
 	for i, header := range headers {
@@ -135,7 +145,7 @@ func send(row []string, headers []string, url string, worker int, c chan SendRes
 		c <- SendResult {
 			WorkNum: worker,
 			Body: fmt.Sprint("Request failed.", err),
-			Code: resp.StatusCode,
+			Code: getErrStatusCode(resp),
 		}
 		return
 	}
