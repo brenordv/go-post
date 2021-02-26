@@ -65,3 +65,8 @@ On local tests i got an average rate of 1 request every 0.013 seconds.
 
 ### Error
 ![Failed run demo](.imgs/demo_error.png "Demo 2")
+
+
+## Final notes
+I have just learnt Golang and this is my first project. Any and all feedbacks are appreciated! 
+Thanks!
