@@ -51,6 +51,9 @@ To review available args and their default values:
 go-post --help
 ```
 
+Check [releases](https://github.com/brenordv/go-post/releases) page if you want to download a compiled version.
+
+
 ## Performance
 On local tests i got an average rate of 1 request every 0.013 seconds.
 
