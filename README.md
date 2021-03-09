@@ -6,7 +6,11 @@ request to a given url.
 The posts will be made concurrently, so it's a fast process, and you can use this application to do simple stress tests
 on your apis.
 
-As from version ```1.1.0.0``` we have a new application: ```gohub```. It sends messages to Azure EventHub.
+## Changelog
+- ```1.2.0.0``` We have a new application: ```gomongo```. It runs find commands on MongoDb.
+- ```1.1.0.0``` We have a new application: ```gohub```. It sends messages to Azure EventHub. 
+ 
+
 
 Check [releases](https://github.com/brenordv/go-post/releases) page if you want to download a compiled version.
 # GoPost application
@@ -131,6 +135,52 @@ go-post --help
 ## Performance
 
 On local tests I got an average rate of 1 file sent every 0.02 seconds.
+
+
+# GoMongo application
+
+Created to stress test (kind of) a MongoDb (CosmosDb on Azure). 
+Wanted to see how many requests it can handle before breaking apart. 
+
+## Limitations
+
+1. So far, only simple find queries work.
+
+## How does it work
+
+1. Use the application from CLI and wait results.
+
+## How to use
+### Step 1: Run the application.
+
+To use this application, you must provide a few command line arguments.
+
+1. The query that will be passed to Find function.
+2. How many requests should be sent.
+3. Name of the database
+4. Name of the collection.
+5. (Optional, default false) If should re-use a single connection.   
+6. (Optional, default 1) Delay (in milliseconds) between each request.
+7. (Optional, default 2) Size of the buffer that will be used. Higher means faster + more resources used on your
+   machine.
+8. (Optional, default 'read from file') MongoDb connection string. If not provided, will try to read from a file called ```mongodb.conn.txt```.
+
+Example:
+
+```shell
+go-mongo --database admin --collection MyCollection --query "{\"Code\": {\"$regex\": \".*200168T4G3.*\"}}" --single-conn --delay 5 --requests 10000
+```
+
+To review available args and their default values:
+
+```shell
+go-mongo --help
+```
+
+## Performance
+Not measured yet.
+
+
 
 # Final notes
 

@@ -17,6 +17,7 @@ require (
 	github.com/mitchellh/mapstructure v1.4.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/schollz/progressbar/v3 v3.7.4 // indirect
+	go.mongodb.org/mongo-driver v1.4.6 // indirect
 	go.opencensus.io v0.23.0 // indirect
 	golang.org/x/crypto v0.0.0-20210220033148-5ea612d1eb83 // indirectíó
 	golang.org/x/net v0.0.0-20210226172049-e18ecbb05110 // indirect
