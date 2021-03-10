@@ -158,9 +158,13 @@ func getClient(clientOptions *options.ClientOptions, workerNum int) (*mongo.Clie
 }
 
 func printResults(results []reqResult) {
+	var sumDuration int64
 	for _, res := range results {
+		sumDuration += res.Elapsed.Nanoseconds()
 		fmt.Printf("Worker %d found %d docs in %s.\n",  res.WorkerNum, res.DocsFound, res.Elapsed)
 	}
+	var avg = sumDuration / int64(len(results))
+	fmt.Println("Average time spent on each request:", time.Duration(avg))
 }
 
 func delay(d int) {
