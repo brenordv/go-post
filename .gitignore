@@ -4,7 +4,9 @@
 **/*.zip
 **/*.7z
 **/eventhub.conn.txt
+**/eventhub.conn*.txt
 **/mongodb.conn.txt
+**/mongodb.conn*.txt
 
 ######################################################################
 # IDE CONTENT

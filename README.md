@@ -123,13 +123,13 @@ To use this application, you must provide a few command line arguments.
 Example:
 
 ```shell
-go-hub --path .tmp\pu_payload.xlsx
+go-hub --path .tmp\path-to-text-files\
 ```
 
 To review available args and their default values:
 
 ```shell
-go-post --help
+go-hub --help
 ```
 
 ## Performance
@@ -183,6 +183,7 @@ Not measured yet.
 
 
 # Final notes
+I noticed that i got a little carried away and now this repo has multiple applications that work in completely different ways. Sorry about that.
 
 I have just learnt Golang and this is my first project. Any and all feedbacks are appreciated!
 Thanks!
